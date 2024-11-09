@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resto Run</title>
+  <link rel="icon" type="image/x-icon" href="../images/logo/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+  <a href="#restoran-list" class="skip-link">Skip to content</a>
+  <header>
+    <div class="header-content">
+      <a href="/"><img src="../images/logo/logo.png" alt="Resto Run Logo" class="round-image"></a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="favorites.html">Favorite</a></li>
+          <li><a href="https://www.instagram.com/cholans16/">About Us</a></li>
+        </ul>
+      </nav>
+      <form class="search-form">
+        <input type="text" id="search" name="search" placeholder="Search..." class="search-input">
+        <button type="submit" class="search-button">Go</button>
+      </form>
+      <input type="checkbox" id="drawer-toggle">
+      <button id="drawer-toggle-label" aria-label="Toggle Navigation Drawer">
+        <div class="hamburger"></div>
+      </button>
+    </div>
+  </header>
+  <nav id="drawer">
+    <button id="close-button" class="close-button">x</button>
+    <ul id="drawer-menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="favorites.html">Favorite</a></li>
+      <li><a href="https://www.instagram.com/cholans16">About Us</a></li>
+    </ul>
+  </nav>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Resto Run</h1>
+      <p>You won't be running around looking for a restaurant</p>
+    </div>
+  </section>
+  <div class="restaurant-wrapper" id="restoran-list">
+    <!-- Daftar restoran akan dimasukkan di sini -->
+  </div>
+  <footer>
+    <p>&copy; SIB 6 Kholan Sururi 2024</p>
+  </footer>
+  <script src="../scripts/index.js"></script>
+</body>
+</html>

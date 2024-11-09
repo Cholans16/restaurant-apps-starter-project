@@ -1,0 +1,56 @@
+{
+  "name": "restaurant-apps",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "serve": "http-server dist",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "your_name <your.email@domain.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@jest/globals": "^29.6.1",
+    "@types/jest": "^29.5.3",
+    "babel-jest": "^29.6.1",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^6.0.0",
+    "fake-indexeddb": "^4.0.2",
+    "html-webpack-plugin": "^5.5.3",
+    "http-server": "^14.1.1",
+    "image-minimizer-webpack-plugin": "^4.0.2",
+    "imagemin-gifsicle": "^7.0.0",
+    "jest": "^29.6.1",
+    "jest-environment-jsdom": "^29.6.1",
+    "mini-css-extract-plugin": "^2.9.0",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^14.2.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.92.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.2",
+    "webpack-merge": "^5.9.0",
+    "whatwg-fetch": "^3.6.2",
+    "workbox-sw": "^7.1.0"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.3.10",
+    "@react-navigation/drawer": "^6.6.15",
+    "axios": "^1.6.8",
+    "mime": "^4.0.3",
+    "regenerator-runtime": "^0.14.0"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "description": ""
+}

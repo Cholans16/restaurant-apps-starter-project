@@ -1,0 +1,387 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Gaya untuk Skip Link */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    z-index: 9999;
+    opacity: 0;
+    transition: top 0.3s, opacity 0.3s;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+    opacity: 1;
+  }
+  
+  /* Gaya untuk tombol */
+  button,
+  input[type="button"],
+  input[type="submit"] {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Gaya untuk tautan */
+  a {
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Gaya untuk input teks */
+  input[type="text"],
+  textarea {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Gaya Global */
+  body {
+    font-family: Arial, sans-serif; /* Mengatur font default untuk halaman */
+  }
+  
+  /* Gaya untuk form pencarian */
+  .search-form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search-button {
+    padding: 5px 10px;
+    background-color: #5AB2FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #4A9FE0;
+  }
+  
+  .header-content input[type="text"] {
+    padding: 10px; /* Menambahkan padding agar input lebih lebar */
+    border: 1px solid #ccc; /* Menambahkan border agar input terlihat */
+    border-radius: 5px; /* Melengkungkan sudut input */
+    width: 150px; /* Lebar input */
+  }
+  
+  .header-content button {
+    padding: 10px 20px; /* Menambahkan padding agar tombol lebih besar */
+    background-color: #5AB2FF; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .header-content button:hover {
+    background-color: #4A9FE0; 
+  }
+  
+  /* Gaya untuk App Bar */
+  header {
+    background-color: #5AB2FF; 
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .round-image {
+    border-radius: 50%; /* Mengatur border-radius menjadi setengah dari lebar atau tinggi gambar */
+    width: 44px;
+    height: 44px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  nav ul li:first-child {
+    margin-left: 0;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  /* Gaya untuk navigasi drawer hanya pada tampilan mobile */
+  /* Tampilkan drawer hanya pada tampilan mobile */
+  @media screen and (min-width: 768px) {
+    #drawer-toggle,
+    #drawer-toggle-label,
+    #drawer {
+      display: none;
+    }
+  }
+  
+  /* Sembunyikan tautan navigasi utama pada tampilan mobile */
+  @media screen and (max-width: 767px) {
+    nav ul {
+      display: none;
+    }
+  
+    /* Gaya untuk tombol X */
+    .close-button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+      font-size: 20px;
+      color: #ffffff; 
+      background-color: #5AB2FF;
+      transition: color 0.3s ease; 
+    }
+  
+    .close-button:hover {
+      color: #4A9FE0; 
+    }
+  
+    /* Gaya untuk drawer */
+    #drawer {
+      background-color: #5AB2FF; /* Warna latar belakang yang lebih terang */
+      padding: 20px;
+      position: fixed;
+      top: 0; /* Penuhi tinggi dari atas */
+      right: 0; /* Posisi drawer di kanan layar */
+      bottom: 0; /* Penuhi tinggi sampai bawah */
+      left: auto; /* Pastikan left tidak diatur agar posisi right berfungsi */
+      width: 40%; /* Sesuaikan lebar drawer */
+      max-width: 250px; /* Batasi lebar maksimum drawer */
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      transition: transform 0.3s ease; /* Tambahkan transisi untuk drawer */
+    }
+  
+    /* Gaya saat drawer terbuka */
+    #drawer.open {
+      transform: translateX(-0%);
+      display: flex; 
+    }
+    
+    /* Gaya untuk tautan menu */
+    #drawer ul {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+      margin: 30px 0 0;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    #drawer ul li {
+      margin-bottom: 10px; 
+    }
+  
+    #drawer ul li a {
+      color: #fff9f9;
+      font-size: 15px;
+      padding: 12px 8px; 
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      transition: color 0.3s ease, background-color 0.3s ease;
+      text-decoration: none;
+    }
+  
+    #drawer ul li a:hover {
+      color: #5AB2FF;
+      background-color: #eee;
+    }
+  
+    /* Sembunyikan checkbox */
+    #drawer-toggle {
+      display: none;
+    }
+  
+    /* Gaya untuk hamburger button */
+    #drawer-toggle-label {
+      cursor: pointer;
+      display: block;
+      padding: 15px 20px;
+      width: 44px; /* Ubah lebar label */
+      height: 44px; /* Ubah tinggi label */
+      right: 0; /* Posisi hamburger button di kanan */
+    }
+  
+    .hamburger {
+      width: 30px; 
+      height: 3px;
+      background-color: #fff; 
+      position: relative;
+      transition: transform 0.3s ease;
+      border-radius: 3px; /* Tambahkan border radius */
+    }
+  
+    /* Ubah tampilan hamburger saat drawer terbuka */
+    #drawer-toggle:checked + #drawer-toggle-label .hamburger {
+      transform: rotate(-45deg); /* Putar hamburger ke kiri */
+      background-color: transparent; /* Hapus warna background hamburger saat terbuka */
+    }
+  
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #fff; 
+      position: absolute;
+      transition: transform 0.3s ease;
+      border-radius: 3px; 
+    }
+    
+    .hamburger::before {
+      top: -8px; /* Atur posisi garis atas */
+    }
+  
+    .hamburger::after {
+      bottom: -8px; /* Atur posisi garis bawah */
+    }
+  
+    /* Ubah tampilan garis hamburger saat drawer terbuka */
+    #drawer-toggle:checked + #drawer-toggle-label .hamburger::before {
+      transform: rotate(45deg) translateY(8px); /* Putar dan geser garis atas */
+    }
+  
+    /* Tampilkan tautan pada drawer navigasi saat hamburger button diklik */
+    #drawer-toggle:checked ~ nav ul {
+      display: block;
+    }
+  }
+  
+  /* Gaya untuk Hero Element */
+  .hero {
+    color: #fff;
+    text-align: center;
+    padding: 100px 0; 
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .hero-content h1 {
+    font-size: 36px;
+    position:relative;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    position: relative;
+  }
+  
+  /* Gaya untuk Restoran */
+  .restaurant-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .restaurant {
+    flex: 0 1 calc(50% - 10px);
+    background-color: #A0DEFF; 
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .restaurant .city {
+    align-self: flex-start;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px;
+    margin-bottom: auto;
+  }
+  
+  .restaurant .rating {
+    align-self: flex-end;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px;
+    margin-top: auto;
+  }
+  
+  .restaurant img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .restaurant h2 {
+    margin-top: 0;
+  }
+  
+  .restaurant p {
+    margin-top: 0;
+  }
+  
+  footer {
+    background-color: #5AB2FF; 
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Gaya untuk satu kolom restoran pada layar mobile */
+  @media screen and (max-width: 600px) {
+    .restaurant-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+    
+  
+    .hero {
+      background-image: url('../public/images/heros/hero-image_3.jpg'); 
+      width: 100%;
+    }
+  
+  
